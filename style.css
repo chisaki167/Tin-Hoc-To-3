@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background: #090a0c;
+  color: #FFFFFF;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  user-select: none;
+}
+
+.app-toolbar {
+  height: 56px;
+  background-color: #14161a;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  z-index: 100;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #D90429;
+  box-shadow: 0 0 12px #D90429;
+}
+
+.brand-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #f1f5f9;
+}
+
+.btn {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.btn-slideshow {
+  background: rgba(255, 255, 255, 0.9);
+  color: #121316;
+  font-weight: bold;
+}
+
+.btn-slideshow:hover {
+  background-color: #D90429;
+  color: #ffffff;
+  box-shadow: 0px 8px 30px rgba(217, 4, 41, 0.6);
+  margin-top: -2px;
+}
+
+.stage-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 24px;
+  padding-right: 24px;
+  overflow: hidden;
+}
+
+.slide-stage {
+  position: relative;
+  width: min(100%, calc((100vh - 100px) * 16 / 9));
+  aspect-ratio: 16 / 9;
+  background-color: #121316;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 25px 70px rgba(0, 0, 0, 0.75), 0px 0px 0px 1px rgba(255, 255, 255, 0.1);
+}
+
+.slide-stage:fullscreen {
+  width: 100vw !important;
+  height: 100vh !important;
+  max-width: none !important;
+  border-radius: 0px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background-color: #000000 !important;
+}
+
+.slide-stage:-webkit-full-screen {
+  width: 100vw !important;
+  height: 100vh !important;
+  max-width: none !important;
+  border-radius: 0px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background-color: #000000 !important;
+}
+
+.slide-stage iframe {
+  width: 100%;
+  height: 100%;
+  border: 0px;
+  display: block;
+}
+
+.ppt-controls {
+  position: absolute;
+  bottom: 14px;
+  left: 18px;
+  z-index: 35;
+  display: none;
+  align-items: center;
+  gap: 8px;
+  background: rgba(18, 19, 22, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 5px 10px;
+  border-radius: 99px;
+  backdrop-filter: blur(8px);
+  opacity: 0.25;
+}
+
+.ppt-controls:hover {
+  opacity: 1;
+}
+
+.slide-stage:fullscreen .ppt-controls {
+  display: flex !important;
+}
+
+.slide-stage:-webkit-full-screen .ppt-controls {
+  display: flex !important;
+}
+
+.ppt-controls button {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.ppt-controls button:hover {
+  background-color: #D90429;
+}
