@@ -130,8 +130,8 @@ body {
 
 .ppt-controls {
   position: absolute;
-  bottom: 14px;
-  left: 18px;
+  top: 16px;      /* Đổi từ bottom sang top để không che thanh công cụ PPT */
+  right: 18px;    /* Đổi từ left sang right */
   z-index: 35;
   display: none;
   align-items: center;
@@ -141,7 +141,8 @@ body {
   padding: 5px 10px;
   border-radius: 99px;
   backdrop-filter: blur(8px);
-  opacity: 0.25;
+  opacity: 0.35;
+  transition: opacity 0.2s ease;
 }
 
 .ppt-controls:hover {
